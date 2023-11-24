@@ -3,7 +3,7 @@ import 'notiflix/dist/notiflix-aio-3.2.6.min.js';
 import SlimSelect from 'slim-select'
 import 'slim-select/dist/slimselect.css';
 
-import { fetchCatByBreed, fetchBreeds } from './cat-api';
+import { fetchCatByBreed, fetchBreeds } from './js/cat-api';
 
 const refs = {
   selector: document.querySelector('.breed-select'),
