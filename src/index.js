@@ -1,4 +1,3 @@
-import axios from 'axios';
 import Notiflix from 'notiflix';
 import 'notiflix/dist/notiflix-aio-3.2.6.min.js';
 import SlimSelect from 'slim-select'
@@ -12,14 +11,6 @@ const refs = {
   error: document.querySelector('.error'),
   div: document.querySelector('.cat-info'),
 };
-// axios.defaults.headers.common['x-api-key'] = 'live_iDoiV0EHJllOQpbTYpgldcvoG2FwbjPi0qHS9L5SZQ11njYtU009ZPQL3TlvYCrZ';
-
-
-// console.log(axios.isCancel('something'));
-
-
-// refs.selector.classList.remove('is-hidden');
-// refs.error.classList.add('is-hidden');
 
 fetchBreeds()
   .then(data => {
@@ -124,8 +115,3 @@ function createSelectorMarkup(arr) {
     )
     .join('');
 }
-
-
-//!===========================SlimSelect================================= !// 
-
-

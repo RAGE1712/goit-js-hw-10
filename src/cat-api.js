@@ -1,7 +1,7 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// axios.defaults.headers.common['x-api-key'] =
-//     'live_iDoiV0EHJllOQpbTYpgldcvoG2FwbjPi0qHS9L5SZQ11njYtU009ZPQL3TlvYCrZ';
+axios.defaults.headers.common['x-api-key'] =
+    'live_iDoiV0EHJllOQpbTYpgldcvoG2FwbjPi0qHS9L5SZQ11njYtU009ZPQL3TlvYCrZ';
   
 
 // Колекція порід
@@ -11,15 +11,20 @@ export function fetchBreeds() {
   const API_KEY =
     'live_iDoiV0EHJllOQpbTYpgldcvoG2FwbjPi0qHS9L5SZQ11njYtU009ZPQL3TlvYCrZ';
 
-  const params = new URLSearchParams({
-    api_key: API_KEY,
-  });
-  return fetch(`${BASE_URL}/${ENDPOINT}?${params}`).then(response => {
-    if (!response.ok) {
-      throw new Error('Breeds not found!');
-    }
-    return response.json();
-  });
+//   const params = new URLSearchParams({
+//     api_key: API_KEY,
+//   });
+    
+//   return fetch(`${BASE_URL}/${ENDPOINT}?${params}`).then(response => {
+//     if (!response.ok) {
+//       throw new Error('Breeds not found!');
+//     }
+//     return response.json();
+    //   });
+    
+    return axios
+      .get(`${BASE_URL}/${ENDPOINT}`)
+      .then(({ data }) => data);
 }; 
 
 // Інформація про кота
@@ -30,16 +35,20 @@ export function fetchCatByBreed(breedId) {
     'live_iDoiV0EHJllOQpbTYpgldcvoG2FwbjPi0qHS9L5SZQ11njYtU009ZPQL3TlvYCrZ';
 
   const params = new URLSearchParams({
-    api_key: API_KEY,
+    // api_key: API_KEY,
     breed_ids: breedId,
   });
 
-  return fetch(`${BASE_URL}/${ENDPOINT}?${params}`).then(response => {
-    if (!response.ok) {
-      throw new Error('Breeds not found!');
-    }
-    return response.json();
-  });
+//   return fetch(`${BASE_URL}/${ENDPOINT}?${params}`).then(response => {
+//     if (!response.ok) {
+//       throw new Error('Breeds not found!');
+//     }
+//     return response.json();
+//   });
+    
+    return axios
+      .get(`${BASE_URL}/${ENDPOINT}?${params}`)
+      .then(({ data }) => data);
 }
 
 
