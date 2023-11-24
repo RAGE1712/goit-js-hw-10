@@ -101,7 +101,7 @@ function createDescriptionMarkup(arr) {
      <img src="${url}" alt="${breeds[0].name}" class="cat-image">
      <span class="cat-descr">
      <h1 class="cat-name">${breeds[0].name}</h1>
-     <h2 class="cat-temperament">${breeds[0].temperament}</h2>
+     <h2 class="cat-temperament">Temperament: ${breeds[0].temperament}</h2>
      <p class="cat-description">${breeds[0].description}</p>
      </span></span>`
     )
