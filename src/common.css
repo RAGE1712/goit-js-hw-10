@@ -1,3 +1,28 @@
+.is-hidden {
+  display: none;
+}
+.error {
+  color: red;
+}
+.cat-image {
+  max-height: 500px;
+}
+.cat-descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cat-card {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.cat-name {
+  font-size: 40px;
+}
+.cat-temperament {
+  font-size: 28px;
+}
 .loader {
   position: relative;
   width: 108px;
@@ -10,7 +35,7 @@
   display: inline-block;
   width: 48px;
   height: 48px;
-  background-color: #fff;
+  background-color: #48c018;
   background-image: radial-gradient(circle 14px, #0d161b 100%, transparent 0);
   background-repeat: no-repeat;
   border-radius: 50%;
