@@ -73,8 +73,13 @@ function onBreedSelect(event) {
         .then(data => {
             refs.div.innerHTML = createDescriptionMarkup(data);
             refs.div.classList.remove('is-hidden');
-            refs.loader.classList.remove('loader');
-            // console.log(createDescriptionMarkup(data))
+          refs.loader.classList.remove('loader');
+          if (createDescriptionMarkup(data) === "") {
+              Notiflix.Notify.failure(
+                `❌ Oops! Something went wrong! Try another cat! ❌`
+              );
+            }
+            console.log(createDescriptionMarkup(data))
         }
    
       )
